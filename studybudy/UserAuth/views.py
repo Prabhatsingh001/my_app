@@ -1,20 +1,14 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
-
-def Hompepage(request):
-    return HttpResponse("this is my homepage")
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
-def registration(request):
-    pass
-
-
-def user_login(request):
-    pass
-
-
-def Dashboard(request):
-    pass
-
+# testing how to create functions to manage requests from API
+# yess!!!!!! fuck yesss!!!!1
+@api_view(['GET','POST'])
+def index(request):
+    courses = {
+        "course" : 'python',
+        'learn' : ['c++', 'django'],
+    }
+    if request.method == 'GET':
+        return Response(courses)
