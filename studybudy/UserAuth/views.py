@@ -1,6 +1,5 @@
 from rest_framework.response import Response
-from UserAuth.models import person
-from UserAuth.serializers import peopleSerializer,SignupSerializer,LoginSerializer,UpdateProfileSerializer
+from UserAuth.serializers import SignupSerializer,LoginSerializer,UpdateProfileSerializer
 from rest_framework.decorators import api_view,permission_classes
 from rest_framework import status
 from django.contrib.auth import authenticate

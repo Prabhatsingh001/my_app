@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'studybudy',
+    'UserAuth',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -69,9 +69,9 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
 }
 
-AUTH_USER_MODEL = 'studybudy.CustomUser'
+AUTH_USER_MODEL = 'UserAuth.CustomUser'
 
-ROOT_URLCONF = 'app.urls'
+ROOT_URLCONF = 'studybudy.urls'
 
 TEMPLATES = [
     {
@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'app.wsgi.application'
+WSGI_APPLICATION = 'studybudy.wsgi.application'
 
 
 # Database
